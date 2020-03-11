@@ -6,7 +6,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import './Explore.css';
 
 
-
 class Explore extends Component {
 	constructor() {
 		super()
@@ -52,7 +51,7 @@ suggestions when searchfield changes while the range of the characters is 3-8 */
 
 // this function gets called when an option is selected from the Autocomplete options or user clicks the button
 fetchData = () => { 
-	const { searchfield , apiKey, hash} = this.state;
+	const { searchfield , apiKey } = this.state;
 	fetch(`https://gateway.marvel.com/v1/public/characters?name=${searchfield}&apikey=${apiKey}`)
 		.then(response => response.json()).then(data => {
 			this.setState({character: {
