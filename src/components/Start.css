@@ -1,0 +1,50 @@
+.parent {
+	margin-left: 15%;
+	margin-right: 15%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding: 2em;
+
+
+	width: 100%;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+@media only screen and (min-width: 900px) {
+  .parent {
+  		text-align: center;
+  		flex-direction: row;
+  		padding: 128px 50px;
+  		max-width: 900px;
+  }
+}
+
+/*@media (min-width: 600px){
+	.parent {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}*/
+
+@media only screen and (min-width: 900px) {
+	.img {
+	    width: 175px;
+	    height: 175px;
+	    min-width: 175px;
+	    margin-right: 2rem;
+	}
+}
+
+.img {
+	width: 120px;
+}
+
+h2 {
+	font-family: Consolas;
+	font-weight: normal;
+}

@@ -1,0 +1,73 @@
+.box {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	min-height: 25rem;
+
+		/* width and margin-top will change when screen changes between 635px back and forth */
+	width:90%;
+	margin-top: 1rem;
+
+		/*background and border*/	
+	border-radius: 21px 21px 21px 21px;
+	box-shadow: 4px 3px 16px 4px rgba(45,191,207,0.64);
+	background: rgb(10,185,125);
+	background: linear-gradient(27deg, rgba(10,185,125,1) 0%, rgba(17,134,118,0.9246999333413799) 60%, rgba(11,160,173,1) 100%);
+}
+
+@media only screen and (min-width: 635px) {
+  .box {
+  		max-width: 635px;
+  		width:600px;
+  		margin-top: 3rem;
+  }
+}
+
+.info { /* when screen size is less than 635 px => name of the character will get on top & 
+			text will be centered */
+	display: flex;
+	flex-direction: column-reverse; 
+	text-align: center; 
+}
+
+@media only screen and (min-width: 635px) {
+  .info { 
+  	width: 80%;
+  	flex-direction: row;
+  	justify-content: space-around;
+  	align-items: center;
+  	padding-top: 10px;
+  }
+}
+
+.bottom {
+	display: flex;
+	padding-bottom: 0.5rem;
+	align-items: center;
+}
+
+@media only screen and (max-width: 635px) {
+	.bottom {
+		flex-direction: column; /* screen size < 635 => button gets under the searchfield */
+	}
+}
+
+div > img {
+	border-radius: 15%;
+}
+
+@media only screen and (max-width: 635px) { /* decreases the image size when screen size is less than 635px */
+	div > img {
+		padding-top: 5px;
+		width:150px;
+		height: 110px;
+		align-self: center;
+	}
+}
+
+.MuiAutocomplete-option {
+	  color: #55A7CA;
+}
